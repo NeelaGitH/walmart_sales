@@ -1,0 +1,129 @@
+{
+  "config": "{\"version\":\"5.59\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY24SU10\",\"version\":\"5.63\",\"type\":2},\"customTheme\":{\"name\":\"AccessibleOrchid\",\"version\":\"5.63\",\"type\":2}},\"activeSectionIndex\":0,\"defaultDrillFilterOtherVisuals\":true,\"linguisticSchemaSyncVersion\":0,\"settings\":{\"useNewFilterPaneExperience\":true,\"allowChangeFilterTypes\":true,\"useStylableVisualContainerHeader\":true,\"queryLimitOption\":6,\"exportDataMode\":1,\"useDefaultAggregateDisplayName\":true,\"useEnhancedTooltips\":true},\"objects\":{\"section\":[{\"properties\":{\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Top'\"}}}}}],\"outspacePane\":[{\"properties\":{\"expanded\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]}}",
+  "layoutOptimization": 0,
+  "resourcePackages": [
+    {
+      "resourcePackage": {
+        "disabled": false,
+        "items": [
+          {
+            "name": "AccessibleOrchid",
+            "path": "BuiltInThemes/AccessibleOrchid.json",
+            "type": 201
+          },
+          {
+            "name": "CY24SU10",
+            "path": "BaseThemes/CY24SU10.json",
+            "type": 202
+          }
+        ],
+        "name": "SharedResources",
+        "type": 2
+      }
+    }
+  ],
+  "sections": [
+    {
+      "config": "{}",
+      "displayName": "Page 1",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "2fbcb5d5726796801049",
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"06eb8419a725d2862602\",\"layouts\":[{\"id\":0,\"position\":{\"x\":922.8571428571429,\"y\":245.71428571428572,\"z\":7000,\"width\":344.28571428571433,\"height\":100,\"tabOrder\":7000}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Walmart_Sales.Date_Range\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"w\",\"Entity\":\"Walmart_Sales\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"w\"}},\"Property\":\"Date_Range\"},\"Name\":\"Walmart_Sales.Date_Range\",\"NativeReferenceName\":\"Date_Range\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"labels\":[{\"properties\":{\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"21D\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 100.00,
+          "width": 344.29,
+          "x": 922.86,
+          "y": 245.71,
+          "z": 7000.00
+        },
+        {
+          "config": "{\"name\":\"28103f32901aa7ed102b\",\"layouts\":[{\"id\":0,\"position\":{\"x\":901.4285714285714,\"y\":65.71428571428572,\"z\":8001,\"width\":247.14285714285717,\"height\":154.2857142857143,\"tabOrder\":8001}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Sum(Walmart_Sales.Weekly_Sales)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"w\",\"Entity\":\"Walmart_Sales\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"w\"}},\"Property\":\"Weekly_Sales\"}},\"Function\":0},\"Name\":\"Sum(Walmart_Sales.Weekly_Sales)\",\"NativeReferenceName\":\"Total Sales\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"w\"}},\"Property\":\"Weekly_Sales\"}},\"Function\":0}}}]},\"columnProperties\":{\"Sum(Walmart_Sales.Weekly_Sales)\":{\"displayName\":\"Total Sales\"}},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 154.29,
+          "width": 247.14,
+          "x": 901.43,
+          "y": 65.71,
+          "z": 8001.00
+        },
+        {
+          "config": "{\"name\":\"3542218b078a5027a9e0\",\"layouts\":[{\"id\":0,\"position\":{\"x\":17.142857142857142,\"y\":427.14285714285717,\"z\":2000,\"width\":334.28571428571433,\"height\":258.5714285714286,\"tabOrder\":2000}}],\"singleVisual\":{\"visualType\":\"columnChart\",\"projections\":{\"Category\":[{\"queryRef\":\"Walmart_Sales.Store\",\"active\":true}],\"Y\":[{\"queryRef\":\"Sum(Walmart_Sales.Weekly_Sales)\"}],\"Series\":[{\"queryRef\":\"Walmart_Sales.Store\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"w\",\"Entity\":\"Walmart_Sales\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"w\"}},\"Property\":\"Store\"},\"Name\":\"Walmart_Sales.Store\",\"NativeReferenceName\":\"Store\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"w\"}},\"Property\":\"Weekly_Sales\"}},\"Function\":0},\"Name\":\"Sum(Walmart_Sales.Weekly_Sales)\",\"NativeReferenceName\":\"Sales\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"w\"}},\"Property\":\"Weekly_Sales\"}},\"Function\":0}}}]},\"columnProperties\":{\"Sum(Walmart_Sales.Weekly_Sales)\":{\"displayName\":\"Sales\"}},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Stores with highest Sales'\"}}}}}]}}}",
+          "filters": "[{\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Walmart_Sales\"}},\"Property\":\"Store\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"subquery\",\"Expression\":{\"Subquery\":{\"Query\":{\"Version\":2,\"From\":[{\"Name\":\"w\",\"Entity\":\"Walmart_Sales\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"w\"}},\"Property\":\"Store\"},\"Name\":\"field\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"w\"}},\"Property\":\"Weekly_Sales\"}},\"Function\":0}}}],\"Top\":5}}},\"Type\":2},{\"Name\":\"w\",\"Entity\":\"Walmart_Sales\",\"Type\":0}],\"Where\":[{\"Condition\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"w\"}},\"Property\":\"Store\"}}],\"Table\":{\"SourceRef\":{\"Source\":\"subquery\"}}}}}]},\"type\":\"TopN\",\"howCreated\":0,\"isHiddenInViewMode\":false}]",
+          "height": 258.57,
+          "width": 334.29,
+          "x": 17.14,
+          "y": 427.14,
+          "z": 2000.00
+        },
+        {
+          "config": "{\"name\":\"35ec4c139531be740736\",\"layouts\":[{\"id\":0,\"position\":{\"x\":17.142857142857142,\"y\":98.57142857142858,\"z\":1000,\"width\":274.2857142857143,\"height\":294.2857142857143,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"columnChart\",\"projections\":{\"Category\":[{\"queryRef\":\"Walmart_Sales.Date.Variation.Date Hierarchy.Year\",\"active\":true},{\"queryRef\":\"Walmart_Sales.Date.Variation.Date Hierarchy.Month\"}],\"Y\":[{\"queryRef\":\"Sum(Walmart_Sales.Weekly_Sales)\"}],\"Series\":[{\"queryRef\":\"Walmart_Sales.Date.Variation.Date Hierarchy.Year\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"w\",\"Entity\":\"Walmart_Sales\",\"Type\":0}],\"Select\":[{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"PropertyVariationSource\":{\"Expression\":{\"SourceRef\":{\"Source\":\"w\"}},\"Name\":\"Variation\",\"Property\":\"Date\"}},\"Hierarchy\":\"Date Hierarchy\"}},\"Level\":\"Year\"},\"Name\":\"Walmart_Sales.Date.Variation.Date Hierarchy.Year\",\"NativeReferenceName\":\"Date Year\"},{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"PropertyVariationSource\":{\"Expression\":{\"SourceRef\":{\"Source\":\"w\"}},\"Name\":\"Variation\",\"Property\":\"Date\"}},\"Hierarchy\":\"Date Hierarchy\"}},\"Level\":\"Month\"},\"Name\":\"Walmart_Sales.Date.Variation.Date Hierarchy.Month\",\"NativeReferenceName\":\"Date Month\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"w\"}},\"Property\":\"Weekly_Sales\"}},\"Function\":0},\"Name\":\"Sum(Walmart_Sales.Weekly_Sales)\",\"NativeReferenceName\":\"Sales\"}]},\"columnProperties\":{\"Sum(Walmart_Sales.Weekly_Sales)\":{\"displayName\":\"Sales\"}},\"drillFilterOtherVisuals\":true,\"objects\":{},\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Year with Maximum Sales'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 294.29,
+          "width": 274.29,
+          "x": 17.14,
+          "y": 98.57,
+          "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"762bbcef7b5704889107\",\"layouts\":[{\"id\":0,\"position\":{\"x\":660,\"y\":98.57142857142858,\"z\":8000,\"width\":252.85714285714286,\"height\":294.2857142857143,\"tabOrder\":8000}}],\"singleVisual\":{\"visualType\":\"tableEx\",\"projections\":{\"Values\":[{\"queryRef\":\"Walmart_Sales.Store\"},{\"queryRef\":\"Walmart_Sales.Store Average Sales\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"w\",\"Entity\":\"Walmart_Sales\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"w\"}},\"Property\":\"Store\"},\"Name\":\"Walmart_Sales.Store\",\"NativeReferenceName\":\"Store\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"w\"}},\"Property\":\"Store Average Sales\"},\"Name\":\"Walmart_Sales.Store Average Sales\",\"NativeReferenceName\":\"Store Average Sales\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"w\"}},\"Property\":\"Store Average Sales\"}}}]},\"drillFilterOtherVisuals\":true,\"filterSortOrder\":3}}",
+          "filters": "[{\"name\":\"fc67845042b4ee0ab1bd\",\"expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Walmart_Sales\"}},\"Property\":\"Weekly_Sales\"}},\"Function\":1}},\"type\":\"Advanced\",\"howCreated\":1,\"isHiddenInViewMode\":false,\"ordinal\":0},{\"name\":\"14f2e4af57894d629643\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Walmart_Sales\"}},\"Property\":\"Store\"}},\"type\":\"Categorical\",\"howCreated\":0,\"isHiddenInViewMode\":false,\"ordinal\":1},{\"name\":\"dd282f5ed7149b40e332\",\"expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Walmart_Sales\"}},\"Property\":\"Store Average Sales\"}},\"type\":\"Advanced\",\"howCreated\":0,\"isHiddenInViewMode\":false,\"ordinal\":2}]",
+          "height": 294.29,
+          "width": 252.86,
+          "x": 660.00,
+          "y": 98.57,
+          "z": 8000.00
+        },
+        {
+          "config": "{\"name\":\"7813c5ef50364060a003\",\"layouts\":[{\"id\":0,\"position\":{\"x\":331.42857142857144,\"y\":98.57142857142858,\"z\":3000,\"width\":261.42857142857144,\"height\":261.42857142857144,\"tabOrder\":3000}}],\"singleVisual\":{\"visualType\":\"columnChart\",\"projections\":{\"Category\":[{\"queryRef\":\"Walmart_Sales.Date.Variation.Date Hierarchy.Year\",\"active\":true},{\"queryRef\":\"Walmart_Sales.Date.Variation.Date Hierarchy.Month\"}],\"Y\":[{\"queryRef\":\"Sum(Walmart_Sales.Weekly_Sales)\"}],\"Series\":[{\"queryRef\":\"Walmart_Sales.Date\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"w\",\"Entity\":\"Walmart_Sales\",\"Type\":0}],\"Select\":[{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"PropertyVariationSource\":{\"Expression\":{\"SourceRef\":{\"Source\":\"w\"}},\"Name\":\"Variation\",\"Property\":\"Date\"}},\"Hierarchy\":\"Date Hierarchy\"}},\"Level\":\"Year\"},\"Name\":\"Walmart_Sales.Date.Variation.Date Hierarchy.Year\",\"NativeReferenceName\":\"Date Year\"},{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"PropertyVariationSource\":{\"Expression\":{\"SourceRef\":{\"Source\":\"w\"}},\"Name\":\"Variation\",\"Property\":\"Date\"}},\"Hierarchy\":\"Date Hierarchy\"}},\"Level\":\"Month\"},\"Name\":\"Walmart_Sales.Date.Variation.Date Hierarchy.Month\",\"NativeReferenceName\":\"Date Month\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"w\"}},\"Property\":\"Weekly_Sales\"}},\"Function\":0},\"Name\":\"Sum(Walmart_Sales.Weekly_Sales)\",\"NativeReferenceName\":\"Sales\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"w\"}},\"Property\":\"Date\"},\"Name\":\"Walmart_Sales.Date\",\"NativeReferenceName\":\"Date\"}]},\"columnProperties\":{\"Sum(Walmart_Sales.Weekly_Sales)\":{\"displayName\":\"Sales\"}},\"drillFilterOtherVisuals\":true,\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Sales on Holiday'\"}}}}}]}}}",
+          "filters": "[{\"name\":\"78f2e000193e4174774a\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Walmart_Sales\"}},\"Property\":\"Holiday_Flag\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"w\",\"Entity\":\"Walmart_Sales\",\"Type\":0}],\"Where\":[{\"Condition\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"w\"}},\"Property\":\"Holiday_Flag\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"'1'\"}}]]}}}]},\"type\":\"Categorical\",\"howCreated\":1,\"objects\":{},\"isLockedInViewMode\":true}]",
+          "height": 261.43,
+          "width": 261.43,
+          "x": 331.43,
+          "y": 98.57,
+          "z": 3000.00
+        },
+        {
+          "config": "{\"name\":\"79df4ccec26909ac5eb9\",\"layouts\":[{\"id\":0,\"position\":{\"x\":387.14285714285717,\"y\":427.14285714285717,\"z\":4000,\"width\":435.7142857142857,\"height\":292.8571428571429,\"tabOrder\":4000}}],\"singleVisual\":{\"visualType\":\"lineChart\",\"projections\":{\"Y\":[{\"queryRef\":\"Sum(Walmart_Sales.Weekly_Sales)\"}],\"Y2\":[{\"queryRef\":\"Sum(Walmart_Sales.Unemployment)\"}],\"Category\":[{\"queryRef\":\"Walmart_Sales.Date.Variation.Date Hierarchy.Year\",\"active\":true},{\"queryRef\":\"Walmart_Sales.Date.Variation.Date Hierarchy.Month\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"w\",\"Entity\":\"Walmart_Sales\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"w\"}},\"Property\":\"Weekly_Sales\"}},\"Function\":0},\"Name\":\"Sum(Walmart_Sales.Weekly_Sales)\",\"NativeReferenceName\":\"Sales\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"w\"}},\"Property\":\"Unemployment\"}},\"Function\":1},\"Name\":\"Sum(Walmart_Sales.Unemployment)\",\"NativeReferenceName\":\"Unemployment\"},{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"PropertyVariationSource\":{\"Expression\":{\"SourceRef\":{\"Source\":\"w\"}},\"Name\":\"Variation\",\"Property\":\"Date\"}},\"Hierarchy\":\"Date Hierarchy\"}},\"Level\":\"Year\"},\"Name\":\"Walmart_Sales.Date.Variation.Date Hierarchy.Year\",\"NativeReferenceName\":\"Date Year\"},{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"PropertyVariationSource\":{\"Expression\":{\"SourceRef\":{\"Source\":\"w\"}},\"Name\":\"Variation\",\"Property\":\"Date\"}},\"Hierarchy\":\"Date Hierarchy\"}},\"Level\":\"Month\"},\"Name\":\"Walmart_Sales.Date.Variation.Date Hierarchy.Month\",\"NativeReferenceName\":\"Date Month\"}]},\"columnProperties\":{\"Sum(Walmart_Sales.Weekly_Sales)\":{\"displayName\":\"Sales\"},\"Sum(Walmart_Sales.Unemployment)\":{\"displayName\":\"Unemployment\"}},\"drillFilterOtherVisuals\":true,\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Effect of Unemployment on Sales'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 292.86,
+          "width": 435.71,
+          "x": 387.14,
+          "y": 427.14,
+          "z": 4000.00
+        },
+        {
+          "config": "{\"name\":\"7d6a76bddb04cdc41193\",\"layouts\":[{\"id\":0,\"position\":{\"x\":1148.5714285714287,\"y\":98.57142857142858,\"z\":6000,\"width\":131.42857142857144,\"height\":101.42857142857143,\"tabOrder\":6000}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Min(Walmart_Sales.Store)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"w\",\"Entity\":\"Walmart_Sales\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"w\"}},\"Property\":\"Store\"}},\"Function\":2},\"Name\":\"Min(Walmart_Sales.Store)\",\"NativeReferenceName\":\"No. of Stores\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"w\"}},\"Property\":\"Store\"}},\"Function\":2}}}]},\"columnProperties\":{\"Min(Walmart_Sales.Store)\":{\"displayName\":\"No. of Stores\"}},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 101.43,
+          "width": 131.43,
+          "x": 1148.57,
+          "y": 98.57,
+          "z": 6000.00
+        },
+        {
+          "config": "{\"name\":\"941b8b87291e98562e75\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":0,\"z\":0,\"width\":1280,\"height\":65,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"Walmart Sales\",\"textStyle\":{\"fontFamily\":\"Georgia\",\"fontSize\":\"32pt\"}}],\"horizontalTextAlignment\":\"center\"}]}}]},\"vcObjects\":{\"background\":[{\"properties\":{\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":3,\"Percent\":0}}}}}}}]}}}",
+          "filters": "[]",
+          "height": 65.00,
+          "width": 1280.00,
+          "x": 0.00,
+          "y": 0.00,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"d725c830552e5a0cdbdd\",\"layouts\":[{\"id\":0,\"position\":{\"x\":901.4285714285714,\"y\":427.14285714285717,\"z\":5000,\"width\":340,\"height\":255.71428571428572,\"tabOrder\":5000}}],\"singleVisual\":{\"visualType\":\"columnChart\",\"projections\":{\"Category\":[{\"queryRef\":\"Walmart_Sales.Holiday\",\"active\":true}],\"Y\":[{\"queryRef\":\"Sum(Walmart_Sales.Weekly_Sales)\"}],\"Series\":[{\"queryRef\":\"Walmart_Sales.Holiday\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"w\",\"Entity\":\"Walmart_Sales\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"w\"}},\"Property\":\"Weekly_Sales\"}},\"Function\":1},\"Name\":\"Sum(Walmart_Sales.Weekly_Sales)\",\"NativeReferenceName\":\"Average Sales\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"w\"}},\"Property\":\"Holiday\"},\"Name\":\"Walmart_Sales.Holiday\",\"NativeReferenceName\":\"Holiday\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"w\"}},\"Property\":\"Weekly_Sales\"}},\"Function\":1}}}]},\"columnProperties\":{\"Sum(Walmart_Sales.Weekly_Sales)\":{\"displayName\":\"Average Sales\"}},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Average Sales on Holiday vs Non-Holiday'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 255.71,
+          "width": 340.00,
+          "x": 901.43,
+          "y": 427.14,
+          "z": 5000.00
+        }
+      ],
+      "width": 1280.00
+    }
+  ],
+  "theme": "AccessibleOrchid"
+}
