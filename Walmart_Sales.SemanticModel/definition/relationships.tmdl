@@ -1,5 +1,0 @@
-relationship b491c292-c579-4784-b97a-dbb512666e83
-	joinOnDateBehavior: datePartOnly
-	fromColumn: Walmart_Sales.Date
-	toColumn: LocalDateTable_11cba466-aff8-48c8-bdd4-f79f32763485.Date
-
